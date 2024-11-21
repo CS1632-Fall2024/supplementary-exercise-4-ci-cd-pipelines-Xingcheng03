@@ -44,7 +44,8 @@ jobs:
       with:
         name: Jacoco coverage results
         path: target/site/jacoco
-
+        
+    # Add the below lines to maven-ci.yml at the end of the "maven_test" job:
     - name: Cache build
       uses: actions/cache@v3
       with:
@@ -62,7 +63,7 @@ jobs:
       contents: write
 
     steps:
-
+    #Add the below lines to maven-ci.yml at the beginning of the steps of the "update_dependence_graph" job:
     - name: Restore cached build
       uses: actions/cache@v3
       with:
@@ -72,4 +73,3 @@ jobs:
     # https://github.com/marketplace/actions/maven-dependency-tree-dependency-submission
     - name: Update dependency graph
       uses: advanced-security/maven-dependency-submission-action@v3
-  
