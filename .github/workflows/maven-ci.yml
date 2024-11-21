@@ -60,7 +60,6 @@ jobs:
 
     permissions:
       contents: write
-      security-events: write
 
     steps:
 
